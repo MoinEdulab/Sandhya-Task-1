@@ -1,0 +1,61 @@
+<nav>Requested Application</nav>
+<table mat-table [dataSource]="students" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="applicationid">
+        <th mat-header-cell *matHeaderCellDef>Application id </th>
+        <td mat-cell *matCellDef="let element"> {{element.applicationid}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name on tanscripte </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="course">
+        <th mat-header-cell *matHeaderCellDef> Course Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+    </ng-container>
+    <!-- action -->
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element" class="action link">
+            <button mat-icon-button mat-Tooltip='view' (click)="handleviewAction(element)" >
+                <mat-icon>visibility</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" mat-Tooltip='notes' (click)="handleNotesAction(element)">
+                <mat-icon>notes</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" mat-Tooltip='reject' (click)="handleRejectAction(element)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+        <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+
+
+
+    </ng-container>
+    <!-- request document -->
+    <ng-container matColumnDef="requested">
+        <th mat-header-cell *matHeaderCellDef> Requested Documents </th>
+        <td mat-cell *matCellDef="let element"> {{element.requested}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+

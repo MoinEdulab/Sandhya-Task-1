@@ -1,0 +1,23 @@
+[{
+    "applicationid":1,
+    "name":"moin",
+    "email":"moin@123",
+    "course":"angular"
+},
+{
+    "applicationid":2,
+    "name":"sonu",
+    "email":"sonu@123",
+    "course":"angular"
+},
+{
+    "applicationid":3,
+    "name":"rohit",
+    "email":"rohit@123",
+    "course":"angular"
+}
+
+
+
+
+]
